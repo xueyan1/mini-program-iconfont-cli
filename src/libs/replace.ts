@@ -20,9 +20,7 @@ export const replaceHexToRgb = (hex) => {
   hex.replace(/../g, (color: string) => {
     // 按16进制将字符串转换为数字
     rgb.push(parseInt(color, 0x10));
-
     return color;
   });
-
-  return 'rgb(' + rgb.join(',') + ')';
+  return  `rgb(${rgb.join(',')})`;
 };
